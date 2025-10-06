@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <button class="icon-btn"><i class="fas fa-plus"></i></button>
+                <div class="temp-toggle">
+                    <span>°C</span>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <span>°F</span>
+                </div>
+            </div>
+
+            <div class="location-info">
+                <p class="location-name"><i class="fas fa-location-dot"></i> Loading...</p>
+                <p class="current-date-display">...</p>
+                <p class="current-time-display"><i class="fas fa-clock"></i> ...</p>
+                <p class="sunrise-sunset"><i class="fas fa-sun"></i> ...</p>
+            </div>
+
+            <div class="current-temp">
+                <h1>--°</h1>
+                <p class="weather-condition"><i class="fas fa-circle-notch fa-spin"></i> Loading...</p>
+            </div>
+
+            <div class="city-illustration"></div>
+        </div>
+
+        <div class="main-content">
+            <div class="main-header">
+                <div class="greeting">
+                    <h2>Welcome!</h2>
+                    <p>Check out today's weather information</p>
+                </div>
+                <div class="search-container">
+                    <input type="text" id="city-search-input" placeholder="Enter city name...">
+                    <button id="city-search-btn" aria-label="Search"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+
+            <div class="widget upcoming-hours">
+                <div class="widget-header">
+                    <h3>Upcoming hours</h3>
+                </div>
+                <div class="hourly-forecast-chart">
+                    <div class="hourly-details"></div>
+                </div>
+            </div>
+
+            <div class="more-details-grid">
+                <h2>More details of today's weather</h2>
+
+                <div class="widget detail-card humidity-card">
+                    <div class="card-header">
+                        <h4>Humidity</h4>
+                        <i class="fas fa-droplet icon-blue"></i>
+                    </div>
+                    <p class="value">--%</p>
+                    <div class="humidity-scale">
+                        <span class="level good">good</span>
+                        <span class="level normal">normal</span>
+                        <span class="level bad">bad</span>
+                    </div>
+                </div>
+
+                <div class="widget detail-card wind-card">
+                    <div class="card-header">
+                        <h4>Wind</h4>
+                        <i class="fas fa-wind icon-blue"></i>
+                    </div>
+                    <div class="wind-gauge">
+                        <span class="wind-speed">-- <small>KM/H</small></span>
+                    </div>
+                </div>
+
+                <div class="widget detail-card precipitation-card">
+                    <div class="card-header">
+                        <h4>Precipitation</h4>
+                        <i class="fas fa-cloud-showers-heavy icon-blue"></i>
+                    </div>
+                    <p class="value">-- <small>MM</small></p>
+                </div>
+
+                <div class="widget detail-card feels-like-card">
+                    <div class="card-header">
+                        <h4>Feels like</h4>
+                        <i class="fas fa-temperature-three-quarters icon-blue"></i>
+                    </div>
+                    <p class="value">--°</p>
+                    <div class="temp-range">
+                        <span>0°</span>
+                        <div class="temp-bar">
+                            <div class="current-point"></div>
+                        </div>
+                        <span>50°</span>
+                    </div>
+                </div>
+
+                <div class="widget detail-card chance-rain-card">
+                    <div class="card-header">
+                        <h4>Chance of rain</h4>
+                        <i class="fas fa-cloud-rain icon-blue"></i>
+                    </div>
+                    <p class="value">--%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
